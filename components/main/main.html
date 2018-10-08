@@ -1,0 +1,21 @@
+<form>
+ 
+    <!-- <p ng-repeat="member in $ctrl.band">{{member}}</p> -->
+
+    <div class=innerSquare>
+            <h1>TODO List</h1>
+            <h3 class="tagLine">A place to store the things you have to do!</h3>
+            <input type="text" class="filter" placeholder="Filter your to-dos"/>
+
+            <ol>
+                    <li ng-class="{done:chore.complete === true}" ng-repeat="chore in $ctrl.list"><button class="complete" ng-if="chore.complete===false">Complete</button>{{chore.task}}<button class="X" >X</button></li>
+             
+                
+            </ol>
+            <input  type="text" ng-model="$ctrl.newTask" class="filter" placeholder="Add your to do"/><span></span>
+        </br>
+            <button class="addButton" ng-click="$ctrl.addListItem()">Add</button> 
+    </div>
+    
+    
+</form>
